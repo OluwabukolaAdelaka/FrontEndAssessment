@@ -5,13 +5,13 @@ import { UsersComponent } from './users/users.component';
 import { CommentsComponent } from './comments/comments.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddUserComponent } from './users/add-user/add-user.component';
-import { CommonModule } from '@angular/common'; 
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, AppNavbar, SidebarComponent ,UsersComponent, 
-    CommentsComponent, AddUserComponent, CommonModule],
+    CommentsComponent, AddUserComponent, SharedModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
