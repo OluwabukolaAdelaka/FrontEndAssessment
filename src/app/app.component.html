@@ -2,11 +2,15 @@
 <app-add-user></app-add-user>
 
 <div class="main-container">
-  <app-sidebar></app-sidebar>
+  <app-sidebar (onNavigate)="navigate($event)"></app-sidebar>
   
   <div class="content">
-    <app-comments></app-comments>
-    <app-users></app-users>
+    <ng-container *ngIf="currentPage === 'comments'">
+      <app-comments></app-comments>
+    </ng-container>
+    <ng-container *ngIf="currentPage === 'users'">
+      <app-users></app-users>
+    </ng-container>
   </div>
 </div>
 
