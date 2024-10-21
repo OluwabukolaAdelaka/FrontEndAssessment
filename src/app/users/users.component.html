@@ -1,30 +1,45 @@
 <div>
-    <h1>This is the User Page</h1>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Phone</th>
-            <th>Website</th>
-            <th>Company</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of users">
-            <td>{{ user.name }}</td>
-            <td>{{ user.username }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.address.street }}, {{ user.address.city }}</td>
-            <td>{{ user.phone }}</td>
-            <td>{{ user.website }}</td>
-            <td>{{ user.company.name }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
+  <h1>This is the User Page</h1>
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>NAME</th>
+        <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef>USERNAME</th>
+        <td mat-cell *matCellDef="let user">{{ user.username }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>EMAIL</th>
+        <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>ADDRESS</th>
+        <td mat-cell *matCellDef="let user">{{ user.address.street }}, {{ user.address.city }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>PHONE</th>
+        <td mat-cell *matCellDef="let user">{{ user.phone }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef>WEBSITE</th>
+        <td mat-cell *matCellDef="let user">{{ user.website }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="company">
+        <th mat-header-cell *matHeaderCellDef>COMPANY</th>
+        <td mat-cell *matCellDef="let user">{{ user.company.name }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
+</div>
