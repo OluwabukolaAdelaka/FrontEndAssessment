@@ -1,0 +1,26 @@
+.my-nav {
+    /* width: Hug (1, 507.99px)px; */
+    /* height: Hug (98px)px; */
+    padding: 25px 20px 25px 20px;
+    gap: 1095.4px;
+    border: 0px 0px 1px 0px;
+    opacity: 0px;
+
+}
+
+.nav-title {
+    font-family: "Lexend Deca";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    text-align: end;
+}
+
+.nav-name {
+    font-family: "Lexend Deca";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;
+
+}
