@@ -34,3 +34,14 @@ button mat-icon {
 button:hover mat-icon {
     color: #ffffff;
 }
+
+@media (max-width: 600px) {
+    .side-bar-cont {
+        flex-direction: row;
+        height: auto;
+    }
+    button {
+        padding: 10px 20px;
+        gap: 10px;
+    }
+}
