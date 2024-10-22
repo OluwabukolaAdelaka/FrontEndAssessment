@@ -22,5 +22,5 @@ export class AppComponent {
     console.log(`Navigating to: ${page}`);
     this.currentPage = page;
   } 
-
+  title = "FrontEndAssessment"
 }

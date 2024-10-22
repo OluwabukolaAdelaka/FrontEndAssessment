@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from '../service/users.service';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     UsersService
@@ -18,7 +20,8 @@ import { MatTableModule } from '@angular/material/table';
   exports: [
     CommonModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class SharedModule {}

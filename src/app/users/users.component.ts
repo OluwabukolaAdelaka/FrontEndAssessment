@@ -15,7 +15,6 @@ import { MatTableModule } from '@angular/material/table';
   styleUrl: './users.component.css'
 })
 export class UsersComponent implements OnInit {
-  // users: User[] = [];
 
   displayedColumns: string[] = ['name', 'username', 'email', 'address', 'phone', 'website', 'company'];
   dataSource!: MatTableDataSource<User>; 
